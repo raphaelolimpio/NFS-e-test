@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nota Fiscal de Serviço (NFS-e)</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Emissão de Nota Fiscal de Serviço (NFS-e)</h1>
+            <form id="nfs-form">
+
+                <label for="valor-venda">Valor de Venda:</label>
+                <input type="number" id="valor-venda" required>
+
+                <label for="itens">Itens Vendidos:</label>
+                <textarea id="itens" required></textarea>
+
+                <label for="irpf">Porcentagem IRPF (%):</label>
+                <input type="number" id="irpf" step="0.01" required>
+
+                <label for="pis">Porcentagem PIS (%):</label>
+                <input type="number" id="pis" step="0.01" required>
+
+                <label for="cofins">Porcentagem COFINS (%):</label>
+                <input type="number" id="cofins" step="0.01" required>
+
+                <label for="inss">Porcentagem INSS (%):</label>
+                <input type="number" id="inss" step="0.01" required>
+
+                <label for="issqn">Porcentagem ISSQN (%):</label>
+                <input type="number" id="issqn" step="0.01" required>
+
+                <button type="button" onclick="gerarNotaFiscal()">Gerar Nota
+                    Fiscal</button>
+            </form>
+
+            <div id="nota-fiscal"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
